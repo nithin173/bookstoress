@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <display-name>Bookstore Application</display-name>
+
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Admin Servlets -->
+  <servlet>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>admin.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/admin/addBook</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>admin.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>EditBookServlet</servlet-name>
+    <servlet-class>admin.EditBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditBookServlet</servlet-name>
+    <url-pattern>/admin/editBook</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteBookServlet</servlet-name>
+    <servlet-class>admin.DeleteBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBookServlet</servlet-name>
+    <url-pattern>/admin/deleteBook</url-pattern>
+  </servlet-mapping>
+
+  <!-- User Servlets -->
+  <servlet>
+    <servlet-name>BrowseBooksServlet</servlet-name>
+    <servlet-class>user.BrowseBooksServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BrowseBooksServlet</servlet-name>
+    <url-pattern>/user/browseBooks</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PurchaseBookServlet</servlet-name>
+    <servlet-class>user.PurchaseBookServlet</servlet-class>
+  </servlet>
+
+  <!-- Servlet mapping for PurchaseBookServlet -->
+  <servlet-mapping>
+    <servlet-name>PurchaseBookServlet</servlet-name>
+    <url-pattern>/user/PurchaseBookServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- Servlet declaration for SearchBooksServlet -->
+  <servlet>
+    <servlet-name>SearchBooksServlet</servlet-name>
+    <servlet-class>user.SearchBooksServlet</servlet-class>
+  </servlet>
+
+  <!-- Servlet mapping for SearchBooksServlet -->
+  <servlet-mapping>
+    <servlet-name>SearchBooksServlet</servlet-name>
+    <url-pattern>/user/SearchBooksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>admin.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/AddBookServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- Error Handling -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+
+</web-app>
